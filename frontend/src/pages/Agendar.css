@@ -1,0 +1,258 @@
+.agendar-pagina {
+  min-height: 100vh;
+  padding: 35px 16px 60px;
+  background: #f7f5f4;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.agendar-container {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.agendar-titulo {
+  margin-bottom: 30px;
+}
+
+.agendar-titulo > p {
+  margin-bottom: 10px;
+  color: #70545c;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.agendar-titulo h1 {
+  margin-bottom: 10px;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.agendar-titulo > span {
+  color: #666;
+  line-height: 1.6;
+}
+
+.agendar-secao {
+  margin-bottom: 20px;
+  padding: 22px;
+  background: #fff;
+  border: 1px solid #e8e3e1;
+}
+
+.agendar-secao h2 {
+  margin-bottom: 18px;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.agendar-servicos {
+  display: grid;
+  gap: 10px;
+}
+
+.agendar-servico {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  border: 1px solid #ddd6d4;
+  cursor: pointer;
+}
+
+.agendar-servico.selecionado {
+  border-color: #70545c;
+  background: #faf6f7;
+}
+
+.agendar-servico input {
+  accent-color: #70545c;
+}
+
+.agendar-servico > strong:last-child {
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.agendar-servico-texto {
+  display: grid;
+  gap: 5px;
+}
+
+.agendar-servico-texto small {
+  color: #777;
+}
+
+.agendar-label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 15px 0 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.agendar-input {
+  display: block;
+  width: 100%;
+  min-height: 46px;
+  padding: 12px;
+  border: 1px solid #d8d2d0;
+  border-radius: 3px;
+  background: #fff;
+  color: #333;
+  font: inherit;
+}
+
+textarea.agendar-input {
+  resize: vertical;
+}
+
+.agendar-input:focus {
+  outline: 2px solid #c7b0b6;
+  outline-offset: 1px;
+}
+
+.agendar-ajuda {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.agendar-periodo {
+  margin-top: 20px;
+}
+
+.agendar-periodo-titulo {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.agendar-periodo-titulo span {
+  color: #777;
+  font-size: 14px;
+}
+
+.agendar-horarios {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.agendar-horario {
+  min-height: 46px;
+  padding: 10px 5px;
+  border: 1px solid #d8d2d0;
+  border-radius: 3px;
+  background: #fff;
+  color: #333;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.agendar-horario:hover {
+  border-color: #70545c;
+}
+
+.agendar-horario.selecionado {
+  border-color: #70545c;
+  background: #70545c;
+  color: #fff;
+}
+
+.agendar-sem-horario,
+.agendar-erro {
+  padding: 14px;
+  background: #fff;
+  border: 1px solid #e0c7c7;
+  color: #8a3535;
+  line-height: 1.5;
+}
+
+.agendar-erro {
+  margin-bottom: 20px;
+}
+
+.agendar-resumo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #e8e3e1;
+  line-height: 1.5;
+}
+
+.agendar-confirmar {
+  width: 100%;
+  min-height: 50px;
+  padding: 14px;
+  border: 0;
+  border-radius: 3px;
+  background: #70545c;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.agendar-confirmar:hover {
+  background: #594149;
+}
+
+.agendar-confirmar:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.agendar-nota {
+  margin-top: 14px;
+  color: #777;
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.agendar-girando {
+  animation: agendar-girar 1s linear infinite;
+}
+
+@keyframes agendar-girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .agendar-pagina {
+    padding: 25px 12px 40px;
+  }
+
+  .agendar-titulo h1 {
+    font-size: 27px;
+  }
+
+  .agendar-secao {
+    padding: 17px 14px;
+  }
+
+  .agendar-servico {
+    flex-wrap: wrap;
+    padding: 12px 10px;
+  }
+
+  .agendar-servico > strong:last-child {
+    margin-left: 28px;
+  }
+
+  .agendar-horarios {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
