@@ -159,3 +159,232 @@ footer {
     font-size: 36px;
   }
 }
+
+/* Cabeçalho e identidade visual */
+.cabecalho-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.marca {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: inherit;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.marca-icone {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  background: #f4e8eb;
+  color: #8a5868;
+  font-size: 27px;
+}
+
+.marca-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.marca-nome {
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: -0.7px;
+}
+
+.marca-descricao {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  opacity: 0.7;
+}
+
+.navegacao {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.navegacao a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+}
+
+.navegacao a:hover {
+  opacity: 1;
+}
+
+/* Botão de acesso administrativo */
+.botao-administrativo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 11px 15px;
+  border: 1px solid #e5d4d9;
+  border-radius: 10px;
+  background: #fff;
+  color: #79515f;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 3px 12px rgba(80, 45, 55, 0.04);
+  transition: all 0.2s ease;
+}
+
+.icone-administrativo {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+}
+
+.seta-administrativa {
+  margin-left: 2px;
+  transition: transform 0.2s ease;
+}
+
+.botao-administrativo:hover {
+  background: #8a5868;
+  border-color: #8a5868;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(138, 88, 104, 0.17);
+}
+
+.botao-administrativo:hover .seta-administrativa {
+  transform: translateX(3px);
+}
+
+.botao-administrativo:focus-visible,
+.navegacao a:focus-visible,
+.marca:focus-visible {
+  outline: 3px solid rgba(138, 88, 104, 0.35);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+/* Responsividade para celular */
+@media (max-width: 760px) {
+  .cabecalho-conteudo {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .navegacao {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 24px;
+    padding-top: 5px;
+  }
+
+  .marca-nome {
+    font-size: 21px;
+  }
+
+  .botao-administrativo {
+    margin-left: auto;
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  .marca-icone {
+    width: 36px;
+    height: 36px;
+    font-size: 23px;
+  }
+
+  .marca-nome {
+    font-size: 18px;
+  }
+
+  .marca-descricao {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .botao-administrativo {
+    gap: 6px;
+    padding: 9px;
+    font-size: 11px;
+  }
+
+  .seta-administrativa {
+    display: none;
+  }
+
+  .navegacao {
+    gap: 18px;
+  }
+}
+
+.cabecalho-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.cabecalho-direita {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 22px;
+  margin-left: auto;
+}
+
+@media (max-width: 760px) {
+  .cabecalho-conteudo {
+    flex-wrap: wrap;
+  }
+
+  .cabecalho-direita {
+    gap: 12px;
+  }
+
+  .navegacao {
+    order: 2;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .cabecalho-direita {
+    gap: 8px;
+  }
+
+  .marca-icone {
+    width: 34px;
+    height: 34px;
+    font-size: 21px;
+  }
+
+  .marca-nome {
+    font-size: 17px;
+  }
+
+  .marca-descricao {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  .botao-administrativo {
+    padding: 9px;
+    font-size: 11px;
+  }
+}

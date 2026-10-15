@@ -6,23 +6,61 @@ function Home() {
     <div className="site">
       <header className="cabecalho">
         <div className="container cabecalho-conteudo">
-          <h1>Agenda Life</h1>
 
-          <nav>
-            <a href="#inicio">Início</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#contato">Contato</a>
-            <Link to="/agendar" className="botao">
-              Agendar horário
+          <div className="cabecalho-direita">
+            <Link to="/" className="marca">
+              <span className="marca-icone" aria-hidden="true">
+                ✿
+              </span>
+
+              <span className="marca-texto">
+                <span className="marca-nome">Agenda Life</span>
+                <span className="marca-descricao">
+                  ESTÉTICA &amp; BEM-ESTAR
+                </span>
+              </span>
             </Link>
-          </nav>
+
+            <Link
+              to="/login"
+              className="botao-administrativo"
+              aria-label="Acessar área administrativa"
+            >
+              <svg
+                className="icone-administrativo"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 3.5 19 6v5.2c0 4.5-2.9 7.6-7 9.3-4.1-1.7-7-4.8-7-9.3V6l7-2.5Z"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M9.5 12 11 13.5l3.5-3.5"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+
+              <span>Área administrativa</span>
+              <span className="seta-administrativa" aria-hidden="true">→</span>
+            </Link>
+          </div>
         </div>
       </header>
+
 
       <main>
         <section id="inicio" className="inicio">
           <div className="container">
-            <p className="subtitulo">ESTÉTICA E CUIDADOS PESSOAIS</p>
+            <p className="subtitulo">
+              ESTÉTICA E CUIDADOS PESSOAIS
+            </p>
 
             <h2>Cuide de você.</h2>
 
@@ -45,21 +83,6 @@ function Home() {
               Um espaço dedicado ao cuidado, ao bem-estar e à beleza,
               com atendimento organizado e agendamento facilitado.
             </p>
-          </div>
-        </section>
-
-        <section className="agendamento">
-          <div className="container">
-            <h2>Agende seu atendimento</h2>
-
-            <p>
-              Consulte os serviços disponíveis e escolha o melhor
-              horário para você.
-            </p>
-
-            <Link to="/agendar" className="botao">
-              Ver horários
-            </Link>
           </div>
         </section>
       </main>

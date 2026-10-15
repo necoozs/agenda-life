@@ -1,55 +1,64 @@
 
-const API_URL = (
-  import.meta.env.VITE_API_URL || "http://localhost:8000"
-).replace(/\/$/, "");
+import { apiFetch } from "./services/api";
 
-async function requisicao(caminho, opcoes = {}) {
-  const resposta = await fetch(`${API_URL}${caminho}`, {
-    ...opcoes,
-    headers: {
-      "Content-Type": "application/json",
-      ...opcoes.headers,
-    },
-  });
-
-  const dados = await resposta.json().catch(() => null);
-
-  if (!resposta.ok) {
-    const mensagem =
-      dados?.detail || "Não foi possível concluir a solicitação.";
-
-    throw new Error(
-      typeof mensagem === "string"
-        ? mensagem
-        : JSON.stringify(mensagem)
-    );
-  }
-
-  return dados;
-}
-
+// SERVIÇOS
 export function listarServicos() {
-  return requisicao("/servicos");
+  return apiFetch("/servicos");
 }
 
+export function criarServico(servico) {
+  return apiFetch("/servicos", {
+    method: "POST",
+    body: JSON.stringify(servico),
+  });
+}
+
+export function editarServico(id, servico) {
+  return apiFetch(`/servicos/${id}`, {
+    method: "PUT",
+    body: JSON.stringify(servico),
+  });
+}
+
+export function removerServico(id) {
+  return apiFetch(`/servicos/${id}`, {
+    method: "DELETE",
+  });
+}
+
+// CLIENTES
 export function listarClientes() {
-  return requisicao("/clientes");
+  return apiFetch("/clientes");
 }
 
 export function criarCliente(cliente) {
-  return requisicao("/clientes", {
+  return apiFetch("/clientes", {
     method: "POST",
     body: JSON.stringify(cliente),
   });
 }
 
+// AGENDAMENTOS
 export function listarAgendamentos() {
-  return requisicao("/agendamentos");
+  return apiFetch("/agendamentos");
 }
 
 export function criarAgendamento(agendamento) {
-  return requisicao("/agendamentos", {
+  return apiFetch("/agendamentos", {
     method: "POST",
     body: JSON.stringify(agendamento),
+  });
+}
+
+export function editarAgendamento(id, agendamento) {
+  return apiFetch(`/agendamentos/${id}`, {
+    method: "PUT",
+    body: JSON.stringify(agendamento),
+  });
+}
+
+export function cancelarAgendamento(id) {
+  return apiFetch(`/agendamentos/${id}/cancelar`, {
+    method: "PATCH",
   });
 }

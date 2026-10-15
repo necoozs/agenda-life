@@ -1,0 +1,387 @@
+
+.pagina-clientes {
+  min-height: 100vh;
+  background: #faf7f6;
+  color: #49343c;
+  font-family: Arial, sans-serif;
+}
+
+.clientes-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 6%;
+  background: #fff;
+  border-bottom: 1px solid #eee5e5;
+}
+
+.clientes-logo {
+  color: #533640;
+  font-size: 23px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.clientes-logo span {
+  color: #b47c8b;
+}
+
+.clientes-voltar {
+  color: #74535e;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.clientes-conteudo {
+  width: min(1250px, 88%);
+  margin: 0 auto;
+  padding: 38px 0 55px;
+}
+
+.clientes-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.clientes-etiqueta {
+  color: #a36e7c;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.clientes-titulo h1 {
+  margin: 9px 0;
+  font-size: clamp(27px, 4vw, 36px);
+}
+
+.clientes-titulo p,
+.clientes-secao-titulo p,
+.clientes-lista-topo p {
+  margin: 0;
+  color: #897a7e;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.clientes-total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 95px;
+  min-height: 85px;
+  border: 1px solid #ead9dd;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.clientes-total strong {
+  color: #a36e7c;
+  font-size: 29px;
+}
+
+.clientes-total span {
+  color: #897a7e;
+  font-size: 12px;
+}
+
+.clientes-layout {
+  display: grid;
+  grid-template-columns: minmax(270px, 0.8fr) minmax(0, 1.5fr);
+  align-items: start;
+  gap: 22px;
+}
+
+.clientes-form-painel,
+.clientes-lista-painel {
+  min-width: 0;
+  padding: 25px;
+  border: 1px solid #eee5e5;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 8px 28px rgb(73 52 60 / 4%);
+}
+
+.clientes-secao-titulo {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 25px;
+}
+
+.clientes-icone {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 13px;
+  background: #f7e9ed;
+  color: #a36e7c;
+  font-size: 27px;
+}
+
+.clientes-secao-titulo h2,
+.clientes-lista-topo h2 {
+  margin: 0 0 6px;
+  font-size: 19px;
+}
+
+.clientes-form-painel form {
+  display: flex;
+  flex-direction: column;
+}
+
+.clientes-form-painel label {
+  margin: 17px 0 8px;
+  color: #59434b;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.clientes-form-painel input,
+.clientes-pesquisa {
+  width: 100%;
+  min-width: 0;
+  padding: 13px 14px;
+  border: 1px solid #e7dddd;
+  border-radius: 9px;
+  outline: none;
+  background: #fffdfd;
+  color: #49343c;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+.clientes-form-painel input:focus,
+.clientes-pesquisa:focus {
+  border-color: #b47c8b;
+  box-shadow: 0 0 0 3px rgb(180 124 139 / 12%);
+}
+
+.clientes-salvar {
+  margin-top: 24px;
+  padding: 14px;
+  border: none;
+  border-radius: 9px;
+  background: #986675;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.clientes-salvar:hover:not(:disabled) {
+  background: #805361;
+}
+
+.clientes-salvar:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.clientes-lista-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.clientes-atualizar {
+  padding: 10px 12px;
+  border: 1px solid #ead9dd;
+  border-radius: 9px;
+  background: #fff;
+  color: #74535e;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.clientes-atualizar:hover {
+  background: #faf0f2;
+}
+
+.clientes-pesquisa {
+  margin-bottom: 18px;
+}
+
+.clientes-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cliente-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid #f0e7e8;
+  border-radius: 12px;
+  background: #fffdfd;
+  transition: background 0.2s;
+}
+
+.cliente-item:hover {
+  background: #fff8fa;
+}
+
+.cliente-avatar {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #f3e2e7;
+  color: #8e5f6e;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.cliente-dados {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.cliente-dados strong {
+  color: #49343c;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.cliente-dados span {
+  color: #897a7e;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.cliente-status {
+  padding: 6px 9px;
+  border-radius: 30px;
+  background: #eaf6ed;
+  color: #287542;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.clientes-mensagem {
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.clientes-mensagem-erro {
+  border: 1px solid #f1c6c8;
+  background: #fff3f3;
+  color: #a32f38;
+}
+
+.clientes-mensagem-sucesso {
+  border: 1px solid #cce8d2;
+  background: #effaf1;
+  color: #287542;
+}
+
+.clientes-vazio {
+  padding: 35px 12px;
+  text-align: center;
+  color: #897a7e;
+}
+
+.clientes-vazio-icone {
+  display: inline-grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 10px;
+  border-radius: 16px;
+  background: #f8ecef;
+  color: #a36e7c;
+  font-size: 27px;
+}
+
+.clientes-vazio h3 {
+  margin: 8px 0;
+  color: #59434b;
+  font-size: 16px;
+}
+
+.clientes-vazio p {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .clientes-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .clientes-header {
+    padding: 17px 4%;
+  }
+
+  .clientes-logo {
+    font-size: 20px;
+  }
+
+  .clientes-voltar {
+    font-size: 12px;
+  }
+
+  .clientes-conteudo {
+    width: 92%;
+    padding-top: 27px;
+  }
+
+  .clientes-titulo {
+    align-items: flex-start;
+  }
+
+  .clientes-total {
+    min-width: 75px;
+    min-height: 70px;
+  }
+
+  .clientes-total strong {
+    font-size: 24px;
+  }
+
+  .clientes-form-painel,
+  .clientes-lista-painel {
+    padding: 18px 14px;
+  }
+
+  .cliente-item {
+    gap: 10px;
+    padding: 12px 10px;
+  }
+
+  .cliente-avatar {
+    width: 39px;
+    height: 39px;
+  }
+
+  .cliente-status {
+    padding: 5px 7px;
+    font-size: 9px;
+  }
+}
