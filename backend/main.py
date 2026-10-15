@@ -1,4 +1,5 @@
 
+import os
 from datetime import date, time
 from decimal import Decimal
 
@@ -37,13 +38,21 @@ app = FastAPI(
 # CONFIGURACAO CORS
 # =========================================================
 
+origens_permitidas = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "http://192.168.1.25:5173",
+]
+
+# URL publica do frontend configurada no Render.
+frontend_url = os.getenv("FRONTEND_URL", "").strip().rstrip("/")
+
+if frontend_url:
+    origens_permitidas.append(frontend_url)
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-        "http://192.168.1.25:5173",
-    ],
+    allow_origins=origens_permitidas,
     allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
