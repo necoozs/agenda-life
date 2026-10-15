@@ -42,6 +42,7 @@ origens_permitidas = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
     "http://192.168.1.25:5173",
+    "https://agenda-life-1.onrender.com",
 ]
 
 # URL publica do frontend configurada no Render.
