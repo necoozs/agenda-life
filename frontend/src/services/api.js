@@ -23,10 +23,7 @@ export async function apiFetch(caminho, opcoes = {}) {
   const token = obterToken();
   const headers = new Headers(opcoes.headers || {});
 
-  if (
-    opcoes.body &&
-    !(opcoes.body instanceof FormData)
-  ) {
+  if (opcoes.body && !(opcoes.body instanceof FormData)) {
     headers.set("Content-Type", "application/json");
   }
 
